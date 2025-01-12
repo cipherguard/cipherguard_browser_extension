@@ -1,0 +1,56 @@
+{
+  "manifest_version": 2,
+  "name": "__MSG_appName__",
+  "short_name": "cipherguard",
+  "version": "4.10.2",
+  "description": "__MSG_appDescription__",
+  "default_locale": "en",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "cipherguard@cipherguard.com",
+      "strict_min_version": "115.0"
+    }
+  },
+  "icons": {
+    "16": "webAccessibleResources/img/icons/icon-16.png",
+    "48": "webAccessibleResources/img/icons/icon-48.png",
+    "128": "webAccessibleResources/img/icons/icon-128.png"
+  },
+  "background": {
+    "page": "index.html"
+  },
+  "browser_action": {
+    "default_icon": "webAccessibleResources/img/icons/icon-32.png",
+    "theme_icons": [{
+        "light": "webAccessibleResources/img/icons/icon-32.png",
+        "dark": "webAccessibleResources/img/icons/icon-32.png",
+        "size": 32
+    }],
+    "default_title": "Cipherguard Quickaccess",
+    "default_popup": "webAccessibleResources/quickaccess.html?cipherguard=quickaccess"
+  },
+  "commands": {
+    "_execute_browser_action": {},
+    "cipherguard-open": {
+      "suggested_key": {
+        "default": "Alt+Shift+P",
+        "mac": "Alt+Shift+P"
+      },
+      "description": "Open cipherguard in a new tab!"
+    }
+  },
+  "permissions": [
+    "activeTab",
+    "clipboardWrite",
+    "tabs",
+    "storage",
+    "unlimitedStorage",
+    "*://*/*",
+    "alarms",
+    "cookies"
+  ],
+  "web_accessible_resources": [
+    "webAccessibleResources/*"
+  ],
+  "content_security_policy": "script-src 'self'; object-src 'none';"
+}
